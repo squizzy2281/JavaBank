@@ -50,7 +50,7 @@ public class BankApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Pobieranie danych od użytkownika
+        
         System.out.print("Podaj imie klienta: ");
         String firstName = scanner.nextLine();
         System.out.print("Podaj nazwisko klienta: ");
@@ -58,14 +58,14 @@ public class BankApp {
         System.out.print("Podaj typ konta (np. Osobiste, Oszczednościowe): ");
         String accountType = scanner.nextLine();
 
-        // Tworzenie obiektów
+        
         Client client = new Client(firstName, lastName);
         Account account = new Account(accountType, client);
 
-        // Wyświetlanie informacji
+        
         System.out.println(client.getFirstName() + " " + client.getLastName() + " zalozyl " + account.toString());
 
-        // Zamknięcie skanera
+        
         scanner.close();
     }
 }
